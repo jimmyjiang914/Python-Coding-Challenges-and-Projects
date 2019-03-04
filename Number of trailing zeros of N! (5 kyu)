@@ -1,0 +1,14 @@
+def zeros(n):
+    import numpy as np
+    import math
+    
+    Z = 0
+    if n == 0:
+        Z = 0
+    else:
+        k_max = int(np.floor(math.log(n,5)))
+        for k in range(k_max):
+            k += 1
+            Z += (np.floor(n/(5**k)))
+        
+    return Z
