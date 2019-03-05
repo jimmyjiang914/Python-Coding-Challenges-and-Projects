@@ -1,0 +1,16 @@
+def palin(a,b):
+    import numpy as np
+    reverse_init = ""
+    init = int((10**(np.ceil(a/2)-1)))
+    b -= 1
+    init += b
+    init = str(init)
+    if a%2 == 0:
+        for element in reversed(init):
+            reverse_init += element
+            out = init + reverse_init
+    else:
+        for element in reversed(init[0:int(np.floor(a/2))]):
+            reverse_init += element
+            out = init + reverse_init
+    return(int(out))
